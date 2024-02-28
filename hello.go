@@ -8,11 +8,14 @@ import "fmt"
 // }
 
 //How to test the code
-const spanish = "Spanish"
-const french = "French"
-const englishHelloPrefix = "Hello, "
-const spanishHelloPrefix = "Hola, "
-const frenchHelloPrefix = "Bonjour, "
+const (
+	spanish = "Spanish"
+	french  = "French"
+
+	englishHelloPrefix = "Hello, "
+	spanishHelloPrefix = "Hola, "
+	frenchHelloPrefix  = "Bonjour, "
+)
 
 func Hello(name string, language string) string {
 	if name == "" {
@@ -29,16 +32,28 @@ func Hello(name string, language string) string {
 	// }
 	// return englishHelloPrefix + name
 
-	prefix := englishHelloPrefix
+	// lets change this swithc to be more inclusive
+	// prefix := englishHelloPrefix
+	// switch language {
+	// case "French":
+	// 	prefix = frenchHelloPrefix
+	// case "Spanish":
+	// 	prefix = spanishHelloPrefix
+	// }
+	// return prefix + name
+	return greetingPrefix(language) + name
+}
 
+func greetingPrefix(language string) (prefix string) {
 	switch language {
-	case "French":
+	case french:
 		prefix = frenchHelloPrefix
-	case "Spanish":
+	case spanish:
 		prefix = spanishHelloPrefix
+	default:
+		prefix = englishHelloPrefix
 	}
-
-	return prefix + name
+	return
 }
 
 func main() {
