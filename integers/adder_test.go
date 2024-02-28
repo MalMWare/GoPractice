@@ -14,24 +14,7 @@ func TestAdder(t *testing.T) {
 	}
 }
 
-// func ExampleAdd() {
-// 	sum := Add(1, 5)
-// 	fmt.Println(sum)
-// 	// output: 6
-// }
-
-// func ExampleAdd() {
-// 	sum := Add(1, 5)
-// 	fmt.Println(sum)
-// 	// Output: 6
-// }
-
-// func ExampleAdd() {
-// 	sum := Add(1, 5)
-// 	fmt.Println(sum)
-// 	//output:6
-// }
-
+// you must put the output or ExampleAdd will not be tested.
 func ExampleAdd() {
 	sum := Add(1, 5)
 	fmt.Println(sum)
